@@ -1,0 +1,10 @@
+<form>
+    <div class="form-group">
+        <input type="text" name="task" class="form-control" id="todo" placeholder="Enter New Task"
+               [(ngModel)]="newTodo.title">
+        <button id="btnAdd" class="btn btn-success btn-block" (click)="addTask()">Add</button>
+    </div>
+</form>
+<div id="wrapper">
+    <app-todo-info [todo]="todo" (deleted)="deleteTask(todo)" (clicked)="toogleTodo(todo)" *ngFor="let todo of todos"></app-todo-info>
+</div>

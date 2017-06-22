@@ -1,0 +1,5 @@
+<div *ngIf="todo">
+    <button class="btn btn-info" (click)="delete()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+    <input type="checkbox" autocomplete="off" [checked]="todo.completed" (click)="todoClicked()">
+    <span [ngClass]="{'completed':todo.completed}">{{todo.title}}</span>
+</div>
