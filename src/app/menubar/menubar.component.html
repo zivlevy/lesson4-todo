@@ -1,0 +1,14 @@
+<nav class="navbar navbar-toggleable-xl navbar-light bg-faded justify-content-between">
+
+    <div class="navbar-nav">
+      <a class="navbar-brand">WebDev Course</a>
+      <a class="nav-item nav-link" [routerLink]="['/todo']" routerLinkActive="myActive">Todo</a>
+      <a class="nav-item nav-link" [routerLink]="['/graph']" routerLinkActive="myActive">Graph</a>
+    </div>
+
+  <div class="navbar-nav">
+      <a *ngIf="isLogin" class="nav-item nav-link" (click)="logout()">Logout</a>
+      <a *ngIf="!isLogin" class="nav-item nav-link" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+
+    </div>
+</nav>

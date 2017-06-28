@@ -1,0 +1,7 @@
+<p-radioButton name="groupname" value="bar" [(ngModel)]="graphType" label="bar" (click)="refresh()"></p-radioButton>
+<p-radioButton name="groupname" value="pie" [(ngModel)]="graphType" label="pie" (click)="refresh()"></p-radioButton>
+<p-radioButton name="groupname" value="line" [(ngModel)]="graphType" label="line" (click)="refresh()"></p-radioButton>
+
+
+<p-chart #myChart [type]="graphType" [data]="data" [options]="options"></p-chart>
+<button class="btn btn-info btn-sm btn-block" type="button" pButton (click)="update($event)">Change Data</button>

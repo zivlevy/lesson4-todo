@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TodoDataService} from "../services/todo-data.service";
 import {Todo} from "../classes/todo";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-todo-list',
@@ -10,10 +11,13 @@ import {Todo} from "../classes/todo";
 export class TodoListComponent implements OnInit {
   newTodo:Todo = new Todo();
   todos:Todo[];
-  constructor(private todoService:TodoDataService) { }
+  constructor(private todoService:TodoDataService,private router:ActivatedRoute) { }
 
   ngOnInit() {
     this.todoService.getAllTodos().subscribe(todos=>this.todos=todos);
+    this.router.params.subscribe(params=>{
+      console.log(params['id'])
+    })
   }
 
 
