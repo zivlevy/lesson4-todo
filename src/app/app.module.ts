@@ -21,6 +21,8 @@ import {LoginGuard} from './guards/login.guard';
 import {ChartModule} from 'primeng/primeng';
 import {RadioButtonModule} from 'primeng/primeng';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HideitDirective } from './directives/hideit.directive';
+import { CollapseComponent } from './collapse/collapse.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
         LoginComponent,
         PageNotFoundComponent,
         MenubarComponent,
-        DashboardComponent
+        DashboardComponent,
+        HideitDirective,
+        CollapseComponent
     ],
     imports: [
         BrowserModule,

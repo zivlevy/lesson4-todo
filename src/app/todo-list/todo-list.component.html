@@ -7,5 +7,5 @@
     </div>
 </form>
 <div id="wrapper">
-    <app-todo-info [todo]="todo" (deleted)="deleteTask(todo)" (clicked)="toogleTodo(todo)" *ngFor="let todo of todos"></app-todo-info>
+    <app-todo-info hideit [delaytime]="3000" [todo]="todo" (deleted)="deleteTask(todo)" (clicked)="toogleTodo(todo)" *ngFor="let todo of todos"></app-todo-info>
 </div>

@@ -1,0 +1,10 @@
+<header>
+  <ng-content select="[colapsetitle]"></ng-content>
+  <button *ngIf="isCollapsed" (click)="toogle()">+</button>
+  <button *ngIf="!isCollapsed" (click)="toogle()">-</button>
+</header>
+
+<div *ngIf="!isCollapsed" id="content">
+  <ng-content select="[colapsecontent]"></ng-content>
+</div>
+

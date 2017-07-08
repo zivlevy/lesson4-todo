@@ -3,10 +3,20 @@
 
     <div class="jumbotron">
         <h1 class="text-center">Elbit Web Dev - Angular 4</h1>
-        <h4 class="text-center text-primary">Learn - Understand - Enjoy</h4>
+        <h4 hideit class="text-center text-primary">Learn - Understand - Enjoy</h4>
     </div>
     <app-menubar></app-menubar>
 <div id="wrapper">
+    <app-collapse>
+        <p colapsetitle> This is my title</p>
+        <div colapsecontent>
+            <h2>this is my content</h2>
+            <button  class="btn btn-danger btn-small">click</button>
+        </div>
+
+    </app-collapse>
+
+
     <router-outlet></router-outlet>
 
 </div>
